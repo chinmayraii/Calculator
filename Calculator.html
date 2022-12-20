@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" style="width: 430px;">
+            <div class="card-header bg-dark">
+                <h4 class="text-white text-center animate__animated animate__heartBeat animate__infinite">Calculator</h4>
+                <h1 class="bg-dark text-white" id="r"></h1>
+                <input  type="number" id="n1" placeholder="Please enter number 1">
+                <input  type="number" id="n2" placeholder="Please enter number 2">
+
+            </div>
+            <div class="card-body" style="background-color: black;" >
+                <button class=" bg-info text-dark" style="width: 390px;" onclick="cal('+')">Add</button>
+                <button class="bg-info text-dark " style="width: 390px;" onclick="cal('-')">Subtract</button>
+                <button class="bg-info text-dark " style="width: 390px;" onclick="cal('*')">Multiply</button>
+                <button class="bg-info text-dark" style="width: 390px;" onclick="cal('/')">Divide</button>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-3"></div>
+                    <div class="col-6 text-white"><img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-vector-calculator-icon-png-image_4221845.jpg" height="30px" width="50px" alt="">
+                        By Chinmay Rai</div>
+                </div>
+                </div>
+        </div>
+    </div>
+
+
+    <script>
+        function cal(n)
+        {
+            var n1=document.getElementById("n1").value;
+            var n2=document.getElementById("n2").value;
+            n1=parseInt(n1);
+            n2=parseInt(n2);
+
+            switch(n)
+            {
+                case '+':
+                    document.getElementById("r").innerHTML=n1+n2;
+                    break;
+                case '-':
+                    document.getElementById("r").innerHTML=n1-n2;
+                    break;
+                case '*':
+                    document.getElementById("r").innerHTML=n1*n2;
+                    break;
+                case '/':
+                    document.getElementById("r").innerHTML=n1/n2;
+                    break;    
+            }
+        }
+    </script>
+</body>
+</html>
